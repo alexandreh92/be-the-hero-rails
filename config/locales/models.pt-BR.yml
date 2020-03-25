@@ -1,0 +1,88 @@
+pt-BR:
+  activerecord:
+    models:
+      user:
+        one: Usuário
+        other: Usuários
+      segment:
+        one: Segmento
+        other: Segmentos
+      tag:
+        one: Tag
+        other: Tags
+      client:
+        one: Cliente
+        other: Clientes
+      company:
+        one: Empresa
+        other: Empresas
+      category:
+        one: Categoria
+        other: Categorias
+      sub_group:
+        one: Sub-Grupo
+        other: Sub-Grupos
+      group:
+        one: Grupo
+        other: Grupos
+    
+    attributes:
+      segment:
+        name: Nome
+      tag:
+        name: Nome
+      client:
+        first_name: Nome
+        last_name: Sobrenome
+        company: Empresa
+        cpf: CPF
+        phone1: 'Telefone 1'
+        phone2: 'Telefone 2'
+        gender: Gênero
+        segment_id: Segmento
+        tag_id: Tags
+        dependent: Dependente
+        birthdate: 'Data de Nascimento'
+        validity: Validade
+        zipcode: CEP
+        address: Rua
+        address_number: Número
+        address_complement: Complemento
+        address_neighbourhood: Bairro
+        city: Cidade
+        state: Estado
+      company:
+        name: Nome Fantasia
+        cnpj: CNPJ
+        phone: Telefone
+        categories: Categorias
+        about: Sobre
+        website: Website
+        discount: Desconto
+        email: 'E-Mail'
+        zipcode: CEP
+        full_address: Endereço
+        address: Rua
+        address_number: Número
+        address_complement: Complemento
+        address_neighbourhood: Bairro
+        city: Cidade
+        state: Estado
+      category:
+        name: Nome
+      sub_group:
+        name: Nome
+        categories: Categorias
+      group:
+        name: Nome
+        sub_group: Sub-Grupo
+      user:
+        first_name: Nome
+        last_name: Sobrenome
+        cpf: CPF
+        birthdate: Data de Nascimento
+        cellphone: Celular
+        phone: Telefone
+        address_street: Rua
+        address_number: Número
+        address_complement: Complemento

@@ -1,0 +1,11 @@
+pt-BR:
+  enums:
+    accredited_network:
+      place_type:
+        physical: Loja Física
+        virtual: Loja Virtual
+    coupon:
+      status:
+        inactive: Vencido
+        active: Ativo
+        used: Usado

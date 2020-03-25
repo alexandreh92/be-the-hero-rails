@@ -1,0 +1,16 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'libs/**/*'
+Style/Documentation:
+  Enabled: false
+Layout/LineLength:
+  AutoCorrect: true
+  Max: 99
+Metrics/AbcSize:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false

@@ -1,0 +1,9 @@
+detectors:
+  IrresponsibleModule:
+    enabled: false
+  Attribute:
+    enabled: false
+  TooManyStatements:
+    enabled: false
+  InstanceVariableAssumption:
+    enabled: false

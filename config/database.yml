@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: vipclub_development
+  pool: 80
+  host: localhost
+  template: template0
