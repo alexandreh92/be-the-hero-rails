@@ -5,12 +5,8 @@ class SessionsController < Devise::SessionsController
 
   private
 
-  def current_token
-    request.env['warden-jwt_auth.token']
-  end
-
   def respond_with(resource, _opts = {})
-    render json: { user: resource.as_json(methods: %i[unity role]),
+    render json: { user: resource,
                    token: current_token }
   end
 

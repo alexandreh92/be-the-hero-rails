@@ -9,7 +9,8 @@ Devise.setup do |config|
     # ENV['DEVISE_JWT_SECRET_KEY']
     jwt.secret = ENV['JWT_SECRET']
     jwt.dispatch_requests = [
-      ['POST', %r{^/login$}]
+      ['POST', %r{^/api/sessions$}],
+      ['POST', %r{^/api/registrations$}]
     ]
     jwt.revocation_requests = [
       ['DELETE', %r{^/logout$}]
@@ -56,7 +57,7 @@ Devise.setup do |config|
   # session. If you need permissions, you should implement that in a before filter.
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
-  # config.authentication_keys = [:email]
+  config.authentication_keys = [:login]
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
@@ -252,7 +253,7 @@ Devise.setup do |config|
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
-  # config.default_scope = :user
+  config.default_scope = :ngo
 
   # Set this configuration to false if you want /users/sign_out to sign out
   # only the current scope. By default, Devise signs out all scopes.

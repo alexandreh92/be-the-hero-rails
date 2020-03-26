@@ -2,28 +2,22 @@
 
 Rails.application.routes.draw do
   scope :api do
-    resources :accredited_networks, on: :collection do
-      get :search, on: :collection
-      get :benefits
-    end
-    resources :filters, on: :collection
-
-    devise_for :users,
+    devise_for :ngos,
+               skip: :registration,
                path: '',
                path_names: {
                  sign_in: 'sessions',
                  sign_out: 'logout'
                },
                controllers: {
-                 sessions: 'sessions',
-                 registrations: 'registrations'
+                 sessions: 'sessions'
                }
-
-    namespace :backoffice do
-      resources :accredited_networks, on: :collection
-      resources :customers, on: :collection
-      resources :companies, on: :collection
-      resources :plans, on: :collection
+    devise_scope :ngo do
+      resource :registration, as: :user_registration, only: %i[new edit
+                                                               update destroy], path: '',
+                              controller: 'registrations' do
+        post :registrations, action: :create, as: ''
+      end
     end
   end
 

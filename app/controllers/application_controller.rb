@@ -39,18 +39,12 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def current_customer
-    @current_customer ||= Customer.where(user: current_user).last
-  end
-
-  def current_company
-    @current_plan ||= Company.where(user: current_user).last
+  def current_token
+    request.env['warden-jwt_auth.token']
   end
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up,
-                                      keys: [:terms_of_service, :user_type,
-                                             client_attributes: %i[first_name last_name cpf],
-                                             company_attributes: %i[name cnpj phone]])
+                                      keys: %i[email name whatsapp city uf])
   end
 end
